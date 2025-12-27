@@ -1,5 +1,20 @@
 import * as vscode from 'vscode';
 
+function formatPath(path: string): string {
+  const config = vscode.workspace.getConfiguration('quickFilePath');
+  const addSpaces = config.get<boolean>('addSurroundingSpaces', true);
+  const addAt = config.get<boolean>('addAtPrefix', false);
+
+  let result = path;
+  if (addAt) {
+    result = '@' + result;
+  }
+  if (addSpaces) {
+    result = ' ' + result + ' ';
+  }
+  return result;
+}
+
 export function activate(context: vscode.ExtensionContext) {
   const sendActiveFilePath = vscode.commands.registerCommand(
     'quickFilePath.sendActiveFilePath',
@@ -17,7 +32,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       const relativePath = vscode.workspace.asRelativePath(editor.document.uri);
-      terminal.sendText(relativePath, false);
+      terminal.sendText(formatPath(relativePath), false);
       terminal.show();
     }
   );
@@ -42,7 +57,7 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      terminal.sendText(relativePath, false);
+      terminal.sendText(formatPath(relativePath), false);
       terminal.show();
     }
   );

@@ -22,7 +22,22 @@
         "command": "quickFilePath.sendSelectedFilePath",
         "title": "Quick File Path: Send Selected File Path to Terminal"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Quick File Path",
+      "properties": {
+        "quickFilePath.addSurroundingSpaces": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add spaces before and after the file path"
+        },
+        "quickFilePath.addAtPrefix": {
+          "type": "boolean",
+          "default": false,
+          "description": "Add @ prefix before the file path"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
