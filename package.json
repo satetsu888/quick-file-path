@@ -3,7 +3,12 @@
   "displayName": "Quick File Path",
   "description": "Quickly send file paths to the terminal",
   "version": "0.0.1",
-  "publisher": "local",
+  "publisher": "satetsu888",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satetsu888/quick-file-path"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
   },
