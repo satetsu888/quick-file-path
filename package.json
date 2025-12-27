@@ -9,6 +9,9 @@
     "url": "https://github.com/satetsu888/quick-file-path"
   },
   "license": "MIT",
+  "sponsor": {
+    "url": "https://www.buymeacoffee.com/satetsu888"
+  },
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.85.0"
