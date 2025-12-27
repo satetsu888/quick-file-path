@@ -9,6 +9,7 @@
     "url": "https://github.com/satetsu888/quick-file-path"
   },
   "license": "MIT",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
