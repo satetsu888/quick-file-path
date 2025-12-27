@@ -2,6 +2,8 @@
 
 Quickly send file paths to the terminal.
 
+![Demo](demo.gif)
+
 ## Features
 
 - **Send Active File Path**: Send the relative path of the currently active editor file to the terminal
