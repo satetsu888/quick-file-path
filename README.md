@@ -22,7 +22,15 @@ Quickly send file paths to the terminal.
 {
   "key": "cmd+;",
   "command": "quickFilePath.sendActiveFilePath",
-  "when": "editorFocus"
+  "when": "editorFocus && !editorHasSelection"
+}
+```
+
+```json
+{
+  "key": "cmd+;",
+  "command": "quickFilePath.sendSelectedText",
+  "when": "editorFocus && editorHasSelection"
 }
 ```
 
