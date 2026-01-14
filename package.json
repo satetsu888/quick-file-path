@@ -2,7 +2,7 @@
   "name": "quick-file-path",
   "displayName": "Quick File Path",
   "description": "Quickly send file paths to the terminal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "satetsu888",
   "repository": {
     "type": "git",
@@ -30,6 +30,10 @@
       {
         "command": "quickFilePath.sendSelectedFilePath",
         "title": "Quick File Path: Send Selected File Path to Terminal"
+      },
+      {
+        "command": "quickFilePath.sendSelectedText",
+        "title": "Quick File Path: Send Selected Text to Terminal"
       }
     ],
     "configuration": {

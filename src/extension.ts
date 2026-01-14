@@ -62,7 +62,34 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  context.subscriptions.push(sendActiveFilePath, sendSelectedFilePath);
+  const sendSelectedText = vscode.commands.registerCommand(
+    'quickFilePath.sendSelectedText',
+    async () => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) {
+        vscode.window.showWarningMessage('No active editor');
+        return;
+      }
+
+      const selection = editor.selection;
+      if (selection.isEmpty) {
+        vscode.window.showWarningMessage('No text selected');
+        return;
+      }
+
+      const terminal = vscode.window.activeTerminal;
+      if (!terminal) {
+        vscode.window.showWarningMessage('No active terminal');
+        return;
+      }
+
+      const selectedText = editor.document.getText(selection);
+      terminal.sendText(selectedText, false);
+      terminal.show();
+    }
+  );
+
+  context.subscriptions.push(sendActiveFilePath, sendSelectedFilePath, sendSelectedText);
 }
 
 export function deactivate() {}

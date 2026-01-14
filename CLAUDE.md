@@ -8,6 +8,7 @@
 | -------- | ---- |
 | `quickFilePath.sendActiveFilePath` | アクティブエディタのファイルパスをターミナルに送信 |
 | `quickFilePath.sendSelectedFilePath` | エクスプローラ/ソースコントロールで選択中のファイルパスをターミナルに送信 |
+| `quickFilePath.sendSelectedText` | エディタで選択中のテキストをターミナルに送信 |
 
 ## 技術的な制約
 
