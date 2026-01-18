@@ -83,8 +83,14 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
+      const relativePath = vscode.workspace.asRelativePath(editor.document.uri);
+      const startLine = selection.start.line + 1; // 1-based line number
+      const endLine = selection.end.line + 1;
+      const lineInfo = startLine === endLine ? `L${startLine}` : `L${startLine}-L${endLine}`;
+
       const selectedText = editor.document.getText(selection);
-      terminal.sendText(selectedText, false);
+      const textToSend = `${relativePath}:${lineInfo}\n${selectedText}`;
+      terminal.sendText(textToSend, false);
       terminal.show();
     }
   );
