@@ -8,7 +8,7 @@ Quickly send file paths to the terminal.
 
 - **Send Active File Path**: Send the relative path of the currently active editor file to the terminal
 - **Send Selected File Path**: Send the relative path of the file selected in Explorer or Source Control to the terminal
-- **Send Selected Text**: Send the selected text in the editor to the terminal
+- **Send Selected Text**: Send the selected text with file path and line number (e.g., `src/file.ts:L10-L20`) to the terminal
 
 ## Usage
 
