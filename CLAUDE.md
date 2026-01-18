@@ -23,8 +23,18 @@ npm run compile
 npx vsce package
 ```
 
-## インストール
+## ローカルインストール
 
 ```bash
-code --install-extension quick-file-path-0.0.1.vsix
+code --install-extension quick-file-path-x.x.x.vsix
+```
+
+## リリース
+
+VS Code Marketplaceへリリースする（GitHub Releasesではない）
+
+```bash
+git tag vX.X.X
+git push origin main --tags
+npx vsce publish
 ```
