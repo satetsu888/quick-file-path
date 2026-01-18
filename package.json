@@ -2,7 +2,7 @@
   "name": "quick-file-path",
   "displayName": "Quick File Path",
   "description": "Quickly send file paths to the terminal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "satetsu888",
   "repository": {
     "type": "git",
